@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: [
     'plugin:vue/vue3-essential',
-    '@vue/airbnb',
+    'prettier',
     '@vue/typescript/recommended',
   ],
   parserOptions: {
@@ -14,5 +14,12 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+    '@typescript-eslint/interface-name-prefix': [0],
+    'prefer-destructuring': [0],
+    'operator-linebreak': [0],
+    'no-continue': [0],
+    'no-param-reassign': [0],
+    'no-nested-ternary': [0],
   },
 };
